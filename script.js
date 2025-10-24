@@ -1,7 +1,7 @@
 const boxes = document.querySelectorAll('.box');
 
 boxes.forEach(box => {
-  box.addEventListener('click', () => {
+  box.addEventListener('click', (event) => {
     // Collapse other boxes
     boxes.forEach(b => {
       if (b !== box) {
