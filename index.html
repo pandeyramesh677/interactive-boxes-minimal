@@ -1,45 +1,135 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Interactive Boxes</title>
-  <link rel="stylesheet" href="styles.css">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Interactive Boxes - Frontend Task</title>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div class="wrap">
+    <h1>Interactive Boxes - Click to expand</h1>
 
-<!--
-  INSTRUCTIONS FOR REVIEWERS:
-  1. Click anywhere on a box (top, middle, bottom) to expand it.
-  2. When expanded, options for colors and sizes appear.
-  3. Only one box expands at a time. Click again to collapse.
--->
+    <div class="stage" id="stage">
+      <!-- Box 1 -->
+      <section class="box size-medium" data-box="1" tabindex="0" aria-expanded="false" aria-labelledby="title-1">
+        <div class="box-header">
+          <div>
+            <h2 id="title-1" class="box-title">Top Box</h2>
+            <p class="box-sub">Click to open options for color and size</p>
+          </div>
+          <div>
+            <button class="btn-primary toggle-btn" aria-label="Toggle box 1">Open</button>
+          </div>
+        </div>
+        <div class="box-body" role="region" aria-hidden="true">
+          <div class="content-area" id="content-1" style="height:64px;">
+            <div class="controls">
+              <div>
+                <div style="font-weight:600;margin-bottom:6px">Color</div>
+                <div class="colors">
+                  <label><input type="radio" name="color-1" value="#ff6b6b" checked> Red</label>
+                  <label><input type="radio" name="color-1" value="#4ecdc4"> Teal</label>
+                  <label><input type="radio" name="color-1" value="#ffd166"> Yellow</label>
+                </div>
+              </div>
+              <div>
+                <div style="font-weight:600;margin-bottom:6px">Size</div>
+                <select name="size-1" class="size-select" aria-label="Size for box 1">
+                  <option value="small">Small</option>
+                  <option value="medium" selected>Medium</option>
+                  <option value="large">Large</option>
+                </select>
+              </div>
+              <div class="actions" style="margin-left:auto">
+                <button class="btn-ghost reset-btn" type="button">Reset</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-<div class="container">
-  <div class="box" id="box1">
-    <h2>Top Box</h2>
-    <div class="options">
-      <p>Colors: Red, Blue, Green</p>
-      <p>Sizes: Small, Medium, Large</p>
+      <!-- Box 2 -->
+      <section class="box size-medium" data-box="2" tabindex="0" aria-expanded="false" aria-labelledby="title-2">
+        <div class="box-header">
+          <div>
+            <h2 id="title-2" class="box-title">Middle Box</h2>
+            <p class="box-sub">Click to open options for color and size</p>
+          </div>
+          <div>
+            <button class="btn-primary toggle-btn" aria-label="Toggle box 2">Open</button>
+          </div>
+        </div>
+        <div class="box-body" role="region" aria-hidden="true">
+          <div class="content-area" id="content-2" style="height:64px;">
+            <div class="controls">
+              <div>
+                <div style="font-weight:600;margin-bottom:6px">Color</div>
+                <div class="colors">
+                  <label><input type="radio" name="color-2" value="#6a82fb" checked> Purple</label>
+                  <label><input type="radio" name="color-2" value="#7bd389"> Green</label>
+                  <label><input type="radio" name="color-2" value="#f78fb3"> Pink</label>
+                </div>
+              </div>
+              <div>
+                <div style="font-weight:600;margin-bottom:6px">Size</div>
+                <select name="size-2" class="size-select" aria-label="Size for box 2">
+                  <option value="small">Small</option>
+                  <option value="medium" selected>Medium</option>
+                  <option value="large">Large</option>
+                </select>
+              </div>
+              <div class="actions" style="margin-left:auto">
+                <button class="btn-ghost reset-btn" type="button">Reset</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Box 3 -->
+      <section class="box size-medium" data-box="3" tabindex="0" aria-expanded="false" aria-labelledby="title-3">
+        <div class="box-header">
+          <div>
+            <h2 id="title-3" class="box-title">Bottom Box</h2>
+            <p class="box-sub">Click to open options for color and size</p>
+          </div>
+          <div>
+            <button class="btn-primary toggle-btn" aria-label="Toggle box 3">Open</button>
+          </div>
+        </div>
+        <div class="box-body" role="region" aria-hidden="true">
+          <div class="content-area" id="content-3" style="height:64px;">
+            <div class="controls">
+              <div>
+                <div style="font-weight:600;margin-bottom:6px">Color</div>
+                <div class="colors">
+                  <label><input type="radio" name="color-3" value="#00b4d8" checked> Blue</label>
+                  <label><input type="radio" name="color-3" value="#90be6d"> Olive</label>
+                  <label><input type="radio" name="color-3" value="#f4a261"> Orange</label>
+                </div>
+              </div>
+              <div>
+                <div style="font-weight:600;margin-bottom:6px">Size</div>
+                <select name="size-3" class="size-select" aria-label="Size for box 3">
+                  <option value="small">Small</option>
+                  <option value="medium" selected>Medium</option>
+                  <option value="large">Large</option>
+                </select>
+              </div>
+              <div class="actions" style="margin-left:auto">
+                <button class="btn-ghost reset-btn" type="button">Reset</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
     </div>
-  </div>
 
-  <div class="box" id="box2">
-    <h2>Middle Box</h2>
-    <div class="options">
-      <p>Colors: Yellow, Purple, Orange</p>
-      <p>Sizes: Small, Medium, Large</p>
-    </div>
-  </div>
-
-  <div class="box" id="box3">
-    <h2>Bottom Box</h2>
-    <div class="options">
-      <p>Colors: Pink, Brown, Gray</p>
-      <p>Sizes: Small, Medium, Large</p>
-    </div>
-  </div>
-</div>
+    <p style="margin-top:18px;color:var(--muted);font-size:13px;text-align:center;">
+  Notes: Click anywhere on the box header or press Enter/Space while focused to toggle. Reset clears styles for that box.
+</p>
 
 <script src="script.js"></script>
 </body>
