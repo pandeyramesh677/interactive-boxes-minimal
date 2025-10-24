@@ -1,130 +1,46 @@
-<!-- This is a comment -->
-<!--
-  INSTRUCTIONS FOR REVIEWERS:
-
-  1. Click on any of the three boxes (Top, Middle, Bottom) to expand them.
-  2. Once expanded, you can see options for changing colors and sizes.
-  3. After testing, you can click again to collapse the box.
-
-  This demonstrates basic Front End interactive functionality using HTML, CSS, and JavaScript.
--->
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Interactive Boxes - Minimal</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Boxes</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <main class="wrap">
-    <h1 class="title">Interactive Boxes - Minimal</h1>
 
-    <section class="boxes">
-      <article class="box" data-box="1" tabindex="0" aria-expanded="false">
-        <div class="box-header">
-          <h2 class="box-title">Top Box</h2>
-          <button class="toggle" aria-label="Toggle box 1">Open</button>
-        </div>
+<!--
+  INSTRUCTIONS FOR REVIEWERS:
+  1. Click anywhere on a box (top, middle, bottom) to expand it.
+  2. When expanded, options for colors and sizes appear.
+  3. Click again to collapse the box.
+-->
 
-        <div class="box-body" aria-hidden="true">
-          <div class="controls">
-            <div class="control-group">
-              <div class="label">Color</div>
-              <div class="options">
-                <button class="color" data-color="#e53e3e" aria-label="Red"></button>
-                <button class="color" data-color="#3182ce" aria-label="Blue"></button>
-                <button class="color" data-color="#38a169" aria-label="Green"></button>
-              </div>
-            </div>
+<div class="container">
+  <div class="box" id="box1">
+    <h2>Top Box</h2>
+    <div class="options">
+      <p>Colors: Red, Blue, Green</p>
+      <p>Sizes: Small, Medium, Large</p>
+    </div>
+  </div>
 
-            <div class="control-group">
-              <div class="label">Size</div>
-              <div class="options">
-                <button class="size" data-size="small">S</button>
-                <button class="size active" data-size="medium">M</button>
-                <button class="size" data-size="large">L</button>
-              </div>
-            </div>
+  <div class="box" id="box2">
+    <h2>Middle Box</h2>
+    <div class="options">
+      <p>Colors: Yellow, Purple, Orange</p>
+      <p>Sizes: Small, Medium, Large</p>
+    </div>
+  </div>
 
-            <div class="control-group actions">
-              <button class="close" aria-label="Close box">Close</button>
-            </div>
-          </div>
-        </div>
-      </article>
+  <div class="box" id="box3">
+    <h2>Bottom Box</h2>
+    <div class="options">
+      <p>Colors: Pink, Brown, Gray</p>
+      <p>Sizes: Small, Medium, Large</p>
+    </div>
+  </div>
+</div>
 
-      <article class="box" data-box="2" tabindex="0" aria-expanded="false">
-        <div class="box-header">
-          <h2 class="box-title">Middle Box</h2>
-          <button class="toggle" aria-label="Toggle box 2">Open</button>
-        </div>
-
-        <div class="box-body" aria-hidden="true">
-          <div class="controls">
-            <div class="control-group">
-              <div class="label">Color</div>
-              <div class="options">
-                <button class="color" data-color="#d53f8c" aria-label="Pink"></button>
-                <button class="color" data-color="#805ad5" aria-label="Purple"></button>
-                <button class="color" data-color="#dd6b20" aria-label="Orange"></button>
-              </div>
-            </div>
-
-            <div class="control-group">
-              <div class="label">Size</div>
-              <div class="options">
-                <button class="size" data-size="small">S</button>
-                <button class="size active" data-size="medium">M</button>
-                <button class="size" data-size="large">L</button>
-              </div>
-            </div>
-
-            <div class="control-group actions">
-              <button class="close" aria-label="Close box">Close</button>
-            </div>
-          </div>
-        </div>
-      </article>
-
-      <article class="box" data-box="3" tabindex="0" aria-expanded="false">
-        <div class="box-header">
-          <h2 class="box-title">Bottom Box</h2>
-          <button class="toggle" aria-label="Toggle box 3">Open</button>
-        </div>
-
-        <div class="box-body" aria-hidden="true">
-          <div class="controls">
-            <div class="control-group">
-              <div class="label">Color</div>
-              <div class="options">
-                <button class="color" data-color="#00b5ad" aria-label="Teal"></button>
-                <button class="color" data-color="#f6ad55" aria-label="Amber"></button>
-                <button class="color" data-color="#63b3ed" aria-label="Light Blue"></button>
-              </div>
-            </div>
-
-            <div class="control-group">
-              <div class="label">Size</div>
-              <div class="options">
-                <button class="size" data-size="small">S</button>
-                <button class="size active" data-size="medium">M</button>
-                <button class="size" data-size="large">L</button>
-              </div>
-            </div>
-
-            <div class="control-group actions">
-              <button class="close" aria-label="Close box">Close</button>
-            </div>
-          </div>
-        </div>
-      </article>
-    </section>
-
-    <p class="note">Instructions: Click the box header or press Enter/Space to expand. Choose color and size to update the box. No libraries used.</p>
-  </main>
-
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
